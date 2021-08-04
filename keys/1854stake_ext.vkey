@@ -1,0 +1,5 @@
+{
+    "type": "StakeExtendedVerificationKeyShelley_ed25519_bip32",
+    "description": "",
+    "cborHex": "5840f2ef4ecd21ad28a8d270ca7be7e96c87f60dc821e13c0d0c5870344e9693637cab0d8a3fa4999bc06b0aa9d49bee11fb196dc55d57ff71507f053550c7bdc1e0"
+}
