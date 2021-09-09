@@ -39,6 +39,17 @@ cardano-cli transaction build-raw \
   --out-file tx.raw
 ```
 
+```
+cardano-cli transaction build-raw \
+  --tx-in "3b40265111d8bb3c3c608d95b3a0bf83461ace32d79336579a1939b3aad1c0b7#0" \
+  --tx-out "addr1q84sh2j72ux0l03fxndjnhctdg7hcppsaejafsa84vh7lwgmcs5wgus8qt4atk45lvt4xfxpjtwfhdmvchdf2m3u3hlsd5tq5r+2000000+7878754 0d63e8d2c5a00cbcffbdf9112487c443466e1ea7d8c834df5ac5c425.testCoin" \
+  --fee 42 \
+  --mint "7878754 0d63e8d2c5a00cbcffbdf9112487c443466e1ea7d8c834df5ac5c425.testCoin+-7878754 0d63e8d2c5a00cbcffbdf9112487c443466e1ea7d8c834df5ac5c425.uestCoin" \
+  --mint-script-file policy.script \
+  --mary-era \
+  --out-file tx.raw
+```
+
 ## Get tx ID
 
 ```
@@ -57,4 +68,9 @@ cardano-cli transaction witness \
   --tx-body-file tx.raw \
   --signing-key-file keys/1854stake_ext.skey \
   --out-file 1854stake.witness
+
+cardano-cli transaction witness \
+  --tx-body-file tx.raw \
+  --signing-key-file keys/1855mint_ext.skey \
+  --out-file 1855.witness
 ```
